@@ -1,0 +1,140 @@
+$purple: #4b2b82;
+$light-bg: #f5f2ff;
+
+.features-section {
+  background: #f7f6fb;
+  padding: 60px 0;
+}
+
+/* GRID EXACT LAYOUT */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  padding: 0 12%;
+}
+
+/* CARD BASE */
+.feature-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 22px;
+  padding: 26px;
+  min-height: 230px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(75,43,130,0.15);
+    border-color: $purple;
+  }
+
+  &.active {
+    border: 2px solid $purple;
+    background: $light-bg;
+  }
+}
+
+/* TEXT STYLE */
+.card-content p {
+  color: $purple;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* AND MORE LINK */
+.more-link {
+  position: absolute;
+  bottom: 20px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: $purple;
+}
+
+/* IMAGE CARD PLACEHOLDER */
+.image-card {
+  padding: 0;
+  background: linear-gradient(135deg, #3b1c6e, #6f2cf5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* TITLE ON IMAGE */
+.overlay-text {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+/* BIG RECTANGLE PANEL */
+.big-panel {
+  margin-top: 60px;
+  padding: 0 12%;
+}
+
+.big-panel-content {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+  min-height: 200px;
+}
+
+/* FADE EFFECT */
+.fade-in {
+  animation: fade 0.4s ease-in;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.big-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;  // IMPORTANT for mobile
+  border-radius: 20px;
+}
+
+@media (max-width: 1200px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;   // 1 card per row
+    padding: 0 6%;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .overlay-text {
+    font-size: 20px;
+  }
+
+  .big-panel {
+    padding: 0 6%;
+  }
+
+  .big-panel-content {
+    padding: 20px;
+  }
+
+  .big-image {
+    max-height: 220px;
+  }
+}

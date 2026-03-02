@@ -1,0 +1,169 @@
+.footer {
+    background: #1a0033;
+    color: #fff;
+    padding: 60px 8% 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        height: auto;
+        width: 250px;
+        max-width: 100%;
+    }
+
+    span {
+        font-size: 28px;
+        font-weight: 600;
+    }
+}
+
+.tagline {
+    margin-top: 15px;
+    color: #c9b3ff;
+}
+
+.footer-company h3,
+.footer-branches h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.country {
+    margin-bottom: 25px;
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin: 4px 0;
+        color: #d6c8ff;
+    }
+}
+
+.footer-branches ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin-bottom: 8px;
+        color: #d6c8ff;
+        cursor: pointer;
+    }
+
+    li:hover {
+        color: #fff;
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+
+    i {
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    i:hover {
+        color: #b388ff;
+    }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* Stack vertically */
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 180px;
+        /* Reduce logo size */
+        height: auto;
+    }
+
+    .footer-company,
+    .footer-branches {
+        text-align: center;
+    }
+
+    .footer-branches ul {
+        columns: 2;
+        /* Make branches list 2 columns on mobile */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+    .footer {
+        padding: 40px 5% 20px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .footer-branches ul {
+        columns: 1;
+        /* Single column on very small phones */
+    }
+
+    .footer-company h3,
+    .footer-branches h3 {
+        font-size: 18px;
+    }
+}
+
+.footer {
+  backdrop-filter: blur(20px);
+}
+
+.social-icons i {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 50%;
+}

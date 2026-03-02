@@ -1,0 +1,95 @@
+<section class="features-section">
+
+  <!-- GRID -->
+  <div class="features-grid">
+
+    <!-- LEFT TEXT CARD -->
+    <div class="feature-card" (click)="setActive('erp')" [class.active]="activeTab==='erp'">
+      <div class="card-content">
+        <p>ai-agent, compliant debt recovery</p>
+        <p>powered by borrower signals</p>
+        <p>behavioural precision</p>
+        <p>settlement negotiation</p>
+        <span class="more-link">and more ></span>
+      </div>
+    </div>
+
+    <!-- ERP IMAGE CARD -->
+    <div class="feature-card image-card" (click)="setActive('erp')">
+      <div class="overlay-text">ERP</div>
+    </div>
+
+    <!-- BOTS TEXT CARD -->
+    <div class="feature-card" (click)="setActive('analytics')" [class.active]="activeTab==='analytics'">
+      <div class="card-content">
+        <p>multi channel bots</p>
+        <p>multi lingual</p>
+        <p>dynamic diallers</p>
+        <p>customer response tracking</p>
+        <span class="more-link">and more ></span>
+      </div>
+    </div>
+
+    <!-- DASHBOARD IMAGE CARD -->
+    <div class="feature-card image-card" (click)="setActive('analytics')">
+      <div class="overlay-text">Dashboard</div>
+    </div>
+
+    <!-- PULSE IMAGE CARD -->
+    <div class="feature-card image-card" (click)="setActive('analytics')">
+      <div class="overlay-text">Pulse</div>
+    </div>
+
+    <!-- CRM TEXT CARD -->
+    <div class="feature-card" (click)="setActive('crm')" [class.active]="activeTab==='crm'">
+      <div class="card-content">
+        <p>collection agency management</p>
+        <p>legal module</p>
+        <p>case allocation</p>
+        <p>debt restructuring</p>
+        <span class="more-link">and more ></span>
+      </div>
+    </div>
+
+    <div class="feature-card image-card" (click)="setActive('crm')">
+      <div class="overlay-text">CRM</div>
+    </div>
+
+    <!-- RIGHT TEXT CARD -->
+    <div class="feature-card" (click)="setActive('bots')" [class.active]="activeTab==='bots'">
+      <div class="card-content">
+        <p>over 30+ presets</p>
+        <p>connectible with lender’s analytics</p>
+        <p>comprehensive case tracking</p>
+        <p>agent productivity enhancement</p>
+        <span class="more-link">and more ></span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- BIG RECTANGLE CONTENT -->
+  <div class="big-panel">
+    <div class="big-panel" #bigPanel>
+
+      <div class="big-panel-content fade-in">
+
+        <h2>{{ activeTab | uppercase }}</h2>
+
+        <!-- IMAGE -->
+        <img [src]="activeImage" class="big-image" />
+
+        <!-- TEXT -->
+        <p *ngIf="activeTab==='erp'">AI powered debt recovery platform...</p>
+        <p *ngIf="activeTab==='erp'">Enterprise resource planning module...</p>
+        <p *ngIf="activeTab==='bots'">Omnichannel bots and dialer system...</p>
+        <p *ngIf="activeTab==='crm'">CRM and agency management tools...</p>
+        <p *ngIf="activeTab==='analytics'">Advanced analytics and productivity tools...</p>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>

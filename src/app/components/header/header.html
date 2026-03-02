@@ -1,0 +1,23 @@
+<nav class="navbar-container">
+  <div class="pill-nav" [class.menu-open]="isMenuOpen">
+    <div class="logo">
+      <img src="assets/mtlogo.png" alt="Moneytor" />
+    </div>
+
+    <div class="hamburger" (click)="toggleMenu()" [class.hidden]="isMenuOpen">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li class="close-trigger" (click)="closeMenu()">&times;</li>
+
+      <li><a href="#about" (click)="closeMenu()">About us</a></li>
+      <li><a href="#features" (click)="closeMenu()">Solutions</a></li>
+      <li><a href="#clients" (click)="closeMenu()">Clients</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Reach out</a></li>
+      <li><a href="#contact" class="contact-btn" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
